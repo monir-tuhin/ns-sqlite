@@ -1,0 +1,17 @@
+<ActionBar title="User List" class="action-bar">
+    <!-- <Button text="New User" (tap)="addUser()"></Button> -->
+</ActionBar>
+<StackLayout orientation="vertical">
+    <Button text="New User" (tap)="addUser()"></Button>
+    <ListView [items]="users">
+        <ng-template let-item="item" let-i="index">
+            <StackLayout>
+                <Label text="{{item.name}}"></Label>
+                <Label text="{{item.email}}"></Label>
+                <!-- <Button text="Edit" (tap)="edit(item)"></Button> -->
+                <Button text="Edit" [nsRouterLink]="['/singleuser', item.id]"></Button>
+                <Button text="Delete" (tap)="deleteUser(item)"></Button>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+</StackLayout>

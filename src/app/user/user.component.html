@@ -1,0 +1,7 @@
+<ActionBar title="Save New User"></ActionBar>
+<StackLayout>
+    <TextField hint="Name" [(ngModel)]="user.name"></TextField>
+    <TextField hint="Email" [(ngModel)]="user.email"></TextField>
+    <Button text="Save" (tap)="saveUser()"></Button>
+    <Button text="Cancel" (tap)="cancel()"></Button>
+</StackLayout>

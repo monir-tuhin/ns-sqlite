@@ -1,0 +1,7 @@
+<ActionBar title="Update User"></ActionBar>
+<StackLayout>
+    <TextField hint="Name" [(ngModel)]="user.name"></TextField>
+    <TextField hint="Email" [(ngModel)]="user.email"></TextField>
+    <Button text="Update User" (tap)="updateUser()"></Button>
+    <Button text="Cancel" (tap)="cancel()"></Button>
+</StackLayout>
